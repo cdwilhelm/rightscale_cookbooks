@@ -5,7 +5,7 @@ description      "Cookbook provides an Apache + Passenger implementation of the"
                  " 'app' Lightweight Resource Provider (LWRP). Installs and" +
                  " configures an Apache + Passenger application server."
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "13.5.1-cdw"
+version          "13.5.5"
 
 supports "centos"
 supports "redhat"
