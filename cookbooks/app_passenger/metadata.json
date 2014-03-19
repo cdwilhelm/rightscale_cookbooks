@@ -5,7 +5,7 @@
   },
   "license": "Copyright RightScale, Inc. All rights reserved.",
   "name": "app_passenger",
-  "version": "13.5.0",
+  "version": "13.5.1.cdw",
   "recipes": {
     "app_passenger::install_required_app_gems": "Installs bundler gems. Gemfile must be present in app directory.",
     "app_passenger::install_custom_gems": "Installs custom gems.",
