@@ -59,6 +59,8 @@ attribute :svn_arguments, :kind_of => String
 # The prefix that will be used to name/locate the backup of a particular code repo.
 attribute :prefix, :kind_of => String
 
+attribute :persist, :kind_of => Boolean
+
 # Location where dump file will be saved. Used by dump recipes to back up to
 # a Remote Object Storage (ROS).
 attribute :storage_account_provider, :kind_of => String
