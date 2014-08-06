@@ -79,13 +79,13 @@ action :install do
     }
   )
   log "  Verifying installation of #{ruby_dev_pkg}"
-  package ruby_dev_pkg
+  #package ruby_dev_pkg
 
   # Installing passenger module
   log "  Installing passenger gem"
   gem_package "passenger" do
     gem_binary "/usr/bin/gem"
-    version "3.0.19"
+    version "3.0.21"
     action :install
   end
 
