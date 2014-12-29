@@ -10,3 +10,4 @@ Gemfile.lock
 chefignoredoc
 doc/*
 tests/config/servertemplate_mapping/acu*.json
+/nbproject/private/
