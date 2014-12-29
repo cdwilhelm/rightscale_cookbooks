@@ -28,6 +28,17 @@
   Order allow,deny
   Allow from all
 </Directory>
+ 
+# The Expires* directives requires the Apache module
+# `mod_expires` to be enabled.
+<Location /assets/>
+  # Use of ETag is discouraged when Last-Modified is present
+  Header unset ETag
+  FileETag None
+  # RFC says only cache for 1 year
+  ExpiresActive On
+  ExpiresDefault "access plus 1 year"
+</Location> 
 
 <% @params[:ruby_base_dir]=%x[/usr/bin/gem environment gemdir] %>
 <% passenger_dir=%x[/bin/bash -c "ls -d #{@params[:ruby_base_dir].chomp}/gems/passenger*"] %>
