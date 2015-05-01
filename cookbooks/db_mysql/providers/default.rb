@@ -748,6 +748,8 @@ action :install_client_driver do
       node[:db][:client][:driver] = "mysql"
     when /1\.9/
       node[:db][:client][:driver] = "mysql2"
+    when /2\./
+       node[:db][:client][:driver] = "mysql2"
     else
       raise "Ruby #{version.stdout} is not supported."
     end
