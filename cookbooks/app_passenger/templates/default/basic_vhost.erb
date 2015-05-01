@@ -44,9 +44,9 @@
 <% passenger_dir=%x[/bin/bash -c "ls -d #{@params[:ruby_base_dir].chomp}/gems/passenger*"] %>
 
 #LoadModule deflate_module /usr/lib/apache2/modules/mod_deflate.so
-LoadModule passenger_module <%="#{passenger_dir.chomp}/ext/apache2/mod_passenger.so"%>
+LoadModule passenger_module <%="#{passenger_dir.chomp}/buildout/apache2/mod_passenger.so"%>
 PassengerRoot <%=passenger_dir%>
-PassengerRuby <%=@params[:ruby_bin]%>
+PassengerDefaultRuby <%=@params[:ruby_bin]%>
 RailsSpawnMethod  <%=@params[:rails_spawn_method]%>
 RailsEnv <%= @params[:rails_env] %>
 
