@@ -85,7 +85,7 @@ action :install do
   log "  Installing passenger gem"
   gem_package "passenger" do
     gem_binary "/usr/bin/gem"
-    version "3.0.21"
+    version "4.0.59"
     action :install
   end
 
